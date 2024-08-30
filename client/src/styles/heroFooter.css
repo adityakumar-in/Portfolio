@@ -1,0 +1,21 @@
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.footer__sub-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.footer__title {
+    font-size: 70px;
+    font-weight: 900;
+}
+.footer__content {
+    font-size: 18px;
+    color: rgb(165, 165, 165);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+}

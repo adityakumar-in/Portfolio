@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+  --darkBackground: #1d1c22;
+  --highlightedText: #03fd9b;
+  --text: #ffffff;
+  --selectedText: #df2e38;
+}
+body {
+  font-family: "JetBrains Mono", monospace;
+  background-color: var(--darkBackground);
+  color: var(--text);
+}
+::selection {
+  background: var(--selectedText);
+  color: white;
+  padding: 2px;
+}
+.mainPage {
+  width: 70%;
+  margin: 0 auto;
+}

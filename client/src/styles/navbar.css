@@ -1,0 +1,108 @@
+:root {
+    --darkBackground: #1d1c22;
+    --highlightedText: #03fd9b;
+    --text: #ffffff;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+.navbar__header-flex {
+    display: flex;
+    width: 127vh;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    background-color: var(--darkBackground);
+}
+.navbar__body {
+    display: flex;
+    align-items: center;
+    /* float: right; */
+}
+
+/* Portfolio Title  */
+#name-suffix {
+    color: var(--highlightedText);
+}
+#name {
+    cursor: pointer;
+    font-size: 35px;
+    box-sizing: border-box;
+    color: white;
+}
+
+/* Different Options for the Navbar */
+ul {
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    gap: 35px;
+    margin-right: 35px;
+    padding-top: 7px;
+}
+li {
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    box-sizing: border-box;
+    color:  white;
+}
+
+.Link {
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+
+    color: var(--highlightedText);
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.active {
+    border-bottom: 2px solid var(--highlightedText);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.passive {
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.passive:hover {
+    border-bottom: 2px solid var(--highlightedText);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.active li, .passive:hover li {
+    color: var(--highlightedText);
+}
+
+/* Navbar button  */
+.navbar__btn {
+    background-color: var(--highlightedText);
+    color: var(--darkBackground);
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.5s box-shadow 0.5s;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.navbar__btn:hover {
+    transform: translateY(-2px);
+    transition-duration: 0.5s;
+    box-shadow: 0 10px 20px rgba(0, 255, 163, 0.2);
+}
+.navbar__btn:not(:hover) {
+    transform: translateY(2px);
+    transition-duration: 0.5s;
+}
+
+
+
+.Link:active {
+    color: var(--highlightedText);
+}
