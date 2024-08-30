@@ -82,16 +82,6 @@ const Work = () => {
   }
 
   const [next, setNext] = useState(1)
-
-  const prevProject = () => {
-    if(next-1 < 1) setNext(totalProjects)
-    else setNext((next - 1))
-  }
-  const nextProject = () => {
-    if(next+1 > totalProjects) setNext(1)
-    else setNext((next + 1))
-  }
-
   return (
     <div className='slider'>
         <Project {...Projects[next]} next={next} setNext={setNext} totalProjects={totalProjects}/>

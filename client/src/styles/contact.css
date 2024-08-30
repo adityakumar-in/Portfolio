@@ -109,12 +109,12 @@ input[type="button"] {
     color: var(--darkBackground);
     border-radius: 25px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 400;
     padding: 12px 20px;
     outline: none;
     border: 1px solid var(--darkBackground);
     transition: transform 0.5s box-shadow 0.5s;
+    font-weight: 550;
+    font-size: 18px;
 }
 input[type="button"]:hover {
     transform: translateY(-2px);
@@ -207,7 +207,10 @@ input[type="button"]:not(:hover) {
 }
 
 .hide {
-    display: none;
+    visibility: hidden;
+}
+.show {
+    visibility: visible;
 }
 .dTitle {
     font-size: 16px;
@@ -217,7 +220,4 @@ input[type="button"]:not(:hover) {
     text-align: left;
     margin-bottom: 10px;
     width: 100%;
-}
-.block {
-    background-color: red;
 }

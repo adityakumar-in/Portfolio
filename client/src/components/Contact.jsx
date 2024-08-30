@@ -12,11 +12,14 @@ const Contact = () => {
     dropDownRef.current.value = {select}
   }, [dropDown])
   
-  useEffect(() => {
-    if (selectRef.current) {
-      selectRef.current.classList.add('block');
-    }
-  }, [dropDownRef.current]);
+  const showHideDropDown = () => {
+    selectRef.current.classList.toggle('hide');
+    selectRef.current.classList.toggle('show');
+  }
+  const removeDropDown = () => {
+    selectRef.current.classList.add('hide');
+    selectRef.current.classList.remove('show');
+  }
 
   const DropDown = () => (
     <>
@@ -64,7 +67,7 @@ const Contact = () => {
     <div className='contact__container'>
 
       <div className='Contact__Left'>
-        <div className="card">
+        <div className="card" onMouseLeave={removeDropDown}>
           <div className='contact__title'>Let's work together</div>
           <div className='contact__sub-title'>Fill your details below</div>
 
@@ -77,11 +80,11 @@ const Contact = () => {
               <input type="number" placeholder='Phone No.' onFocus={()=>{setInpActive('phone')}}  onBlur={()=>{setInpActive('')}} id={inpActive==='phone' && 'active-outline'} />
               <input type="mail" required placeholder='E-mail' onFocus={()=>{setInpActive('mail')}}  onBlur={()=>{setInpActive('')}}  id={inpActive==='mail' && 'active-outline'} />
             </div>
-            <div className='dropDown' onClick={()=>{setInpActive('drop');setDropDown(true);}}  onMouseLeave={()=>{setInpActive('')}}  id={inpActive==='drop' && 'active-outline'}>
+            <div className='dropDown' onClick={()=>{setInpActive('drop');setDropDown(true); showHideDropDown()}}  onMouseLeave={()=>{setInpActive('')}}  id={inpActive==='drop' && 'active-outline'}>
               <div ref={dropDownRef}>{select}</div>
               <div><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#B7B7B7"><path d="M480-380 276-584l20-20 184 184 184-184 20 20-204 204Z"/></svg></div>
 
-              <div className='down' ref={selectRef}>
+              <div className='down hide' ref={selectRef}>
                 {dropDown && <DropDown />}
               </div>
             </div>

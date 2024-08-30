@@ -1,4 +1,17 @@
 
+@keyframes goCome {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.98);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
 .pro__cover {
     margin-top: 125px;
     height: 77vh;
@@ -11,8 +24,11 @@
 .project {
     display: flex;
     background-color: rgba(86, 86, 86, 0.15);
-    width: 90%;
+    width: 100%;
     border-radius: 10px;
+}
+.animate {
+    animation: goCome 1s linear;
 }
 .project__left {
     width: 55%;

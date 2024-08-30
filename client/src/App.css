@@ -6,6 +6,23 @@
   --text: #ffffff;
   --selectedText: #df2e38;
 }
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00ff9d;
+  border-radius: 7px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #00cc7d;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #1e1e1e;
+}
+
 body {
   font-family: "JetBrains Mono", monospace;
   background-color: var(--darkBackground);

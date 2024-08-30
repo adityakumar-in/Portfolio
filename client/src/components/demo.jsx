@@ -1,44 +1,19 @@
-import { React, useRef, useEffect } from 'react'
+import React from 'react'
 import '../styles/project.css'
 
 const Project = ({ No, title, about, technologies, img, link, github, next, setNext, totalProjects }) => {
-  const pro = useRef(null)
 
   const prevProject = () => {
-    return new Promise(async (resolve, reject) => {
-      setTimeout(() => {
-        pro.current.classList.toggle('animate')
-        if(next-1 < 1) setNext(totalProjects)
-        else setNext((next - 1))
-      }, 500)
-
-      setTimeout(() => {
-        pro.current.classList.toggle('animate')
-      }, 1)
-
-      resolve()
-    })
+    if(next-1 < 1) setNext(totalProjects)
+    else setNext((next - 1))
   }
   const nextProject = () => {
-    return new Promise(async (resolve, reject) => {
-      setTimeout(async () => {
-        await pro.current.classList.toggle('animate')
-        if(next+1 > totalProjects) await setNext(1)
-        else await setNext((next + 1))
-      }, 500)
-
-      setTimeout(() => {
-        pro.current.classList.toggle('animate')
-      }, 1)
-
-      resolve()
-    })  
+    if(next+1 > totalProjects) setNext(1)
+    else setNext((next + 1))
   }
-
   return (
     <div className='pro__cover slide'>
-      <div onClick={prevProject} className='changeSlide'><svg xmlns="http://www.w3.org/2000/svg" className='rotate' height="40px" viewBox="0 -960 960 960" width="40px" fill="#D9D9D9"><path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z"/></svg></div>  
-      <div ref={pro}>
+      <div onClick={prevProject} className='changeSlide'><svg xmlns="http://www.w3.org/2000/svg" className='rotate' onClick={()=>{setNext((next+1)%8)}} height="40px" viewBox="0 -960 960 960" width="40px" fill="#D9D9D9"><path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z"/></svg></div>  
         <div className='project'>
           <div className='project__left'>
             <div className='left__card'>
@@ -57,9 +32,7 @@ const Project = ({ No, title, about, technologies, img, link, github, next, setN
             <img src={img} alt="Project Preview" />
           </div>
         </div>
-      </div>
-        
-      <div onClick={nextProject} className='changeSlide'><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#D9D9D9"><path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z"/></svg></div>  
+      <div onClick={nextProject} className='changeSlide'><svg xmlns="http://www.w3.org/2000/svg" onClick={()=>{setNext((next+1)%8)}} height="40px" viewBox="0 -960 960 960" width="40px" fill="#D9D9D9"><path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z"/></svg></div>  
     </div>
   )
 }
