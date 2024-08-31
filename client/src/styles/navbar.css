@@ -2,21 +2,25 @@
     position: fixed;
     top: 0;
     z-index: 5;
-    
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .navbar-title {
     display: flex;
-    width: 127vh;
     justify-content: space-between;
     align-items: center;
+    padding: 0 40px;
     padding-top: 40px;
+    width: 1178px;
     background-color: var(--darkBackground);
-    /* background-color: red; */
 }
 .navbar-body {
     display: flex;
     align-items: center;
+}
+.hamburger-icon {
+    display: none;
 }
 
 /* Portfolio Title  */
@@ -31,7 +35,7 @@
 }
 
 /* Different Options for the Navbar */
-ul {
+.normal-ul {
     display: flex;
     list-style: none;
     font-size: 18px;
@@ -39,7 +43,7 @@ ul {
     margin-right: 35px;
     padding-top: 7px;
 }
-li {
+.normal-li {
     padding-bottom: 5px;
     border-bottom: 2px solid transparent;
     box-sizing: border-box;
@@ -97,4 +101,79 @@ li {
 .hire-me-button:not(:hover) {
     transform: translateY(2px);
     transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 1050px) {
+    .navbar-body {
+        display: none;
+    }
+    
+    .hamburger-icon {
+        display: block;
+        padding-bottom: 7px;
+    }
+}
+
+
+
+
+
+
+.hamburger-link {
+    text-decoration: none;
+    outline: none;
+    color: rgb(207, 207, 207);
+    width: 100%;
+    cursor: pointer;
+    padding: 35px 0;
+    list-style: none;
+}
+.hamburger-link:hover {
+    color: var(--darkBackground);
+    font-weight: 500;
+}
+Link {
+    outline: none;
+    text-decoration: none;
+}
+
+
+.hide-options {
+    visibility: hidden;
+}
+.show-options {
+    visibility: visible;
+}
+
+.hamburger-drop-down {
+    position: absolute;
+    z-index: 4;
+    top: 115px;
+    right: 6px;
+    display: flex;
+    flex-direction: column;
+    width: 339px;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 7px;
+    background-color: var(--darkBackground);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.option {
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+}
+.last-option {
+    border-bottom-left-radius: 7px;
+}
+.option:hover {
+    background-color: var(--highlightedText);
+    color: var(--darkBackground);
+    font-weight: 700;
+}
+.option-cover {
+    color: rgb(207, 207, 207);
+    text-align: left;
+    width: 100%;
 }
