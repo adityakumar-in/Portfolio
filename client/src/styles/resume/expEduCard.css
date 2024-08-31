@@ -1,0 +1,43 @@
+.education-card {
+    background-color: rgb(58 59 65 / 52%);
+    width: 40%;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 7px;
+    transition: transform 0.5s box-shadow 0.5s;
+    cursor: pointer;
+}
+.education-card:hover {
+    transform: translateY(-2px);
+    transition-duration: 0.5s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.321);
+}
+.education-card:not(:hover) {
+    transform: translateY(2px);
+    transition-duration: 0.5s;
+}
+.education-year {
+    color: var(--highlightedText);
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.education-org {
+    display: flex;
+    align-items: center;
+    color: rgba(245, 245, 245, 0.521);
+    font-size: 14px;
+    padding-top: 10px;
+}
+.education-org::before {
+    width: 5px;
+    height: 5px;
+    content: "";
+    display: inline-block;
+    background-color: var(--highlightedText);
+    margin-right: 7px;
+    border-radius: 10px;
+}
+
+.short-text {
+    padding-top: 30px;
+}

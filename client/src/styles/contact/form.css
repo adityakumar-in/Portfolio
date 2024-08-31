@@ -1,0 +1,62 @@
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+.input-text, .input-number, .input-mail {
+    outline: none;
+    font-size: 18px;
+    padding: 10px;
+    width: 48%;
+    margin-right: 2%;
+    box-sizing: border-box;
+    border: 0.5px solid rgba(88, 88, 88, 0.537);
+    border-radius: 7px;
+    margin-bottom: 10px;
+    color: rgb(171, 170, 170);
+    background-color: var(--darkBackground);
+    border: 1.5px solid transparent;
+}
+
+.project-detail-input {
+    display: block;
+    padding: 10px;
+    width: 96%;
+    border: 0.5px solid rgba(88, 88, 88, 0.537);
+    border-radius: 7px;
+    font-size: 20px;
+    outline: none;
+    margin-bottom: 18px;
+    color: rgb(171, 170, 170);
+    font-weight: 200;
+    background-color: var(--darkBackground);
+    border: 1.5px solid transparent;
+}
+.project-detail-input:focus {
+    width: 100%;
+}
+.submit-button {
+    background-color: var(--highlightedText);
+    color: var(--darkBackground);
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 12px 20px;
+    outline: none;
+    border: 1px solid var(--darkBackground);
+    transition: transform 0.5s box-shadow 0.5s;
+    font-weight: 550;
+    font-size: 18px;
+}
+.submit-button:hover {
+    transform: translateY(-2px);
+    transition-duration: 0.5s;
+    box-shadow: 0 10px 20px rgba(0, 255, 163, 0.2);
+}
+.submit-button:not(:hover) {
+    transform: translateY(2px);
+    transition-duration: 0.5s;
+}
+
+#active-input {
+    border: 1.5px solid #00ae69;
+    box-sizing: border-box;
+}

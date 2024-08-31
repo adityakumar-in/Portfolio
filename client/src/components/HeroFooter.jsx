@@ -1,25 +1,25 @@
 import React from 'react'
-import '../styles/heroFooter.css'
+import '../styles/home/heroInfo.css'
 
 const HeroFooter = ({ experience, projects, technologies, contest }) => {
   return (
-    <div className='footer__container'>
-      <div className='footer__sub-container'>
-        <div className='footer__title'>{experience}</div>
-        <div className='footer__content'>Years of experience</div>
+    <div className='heroInfo-container'>
+      <div className='heroInfo'>
+        <div className='heroInfo-title'>{experience}</div>
+        <div className='heroInfo-content'>Years of experience</div>
       </div>
-      <div className='footer__sub-container'>
-        <div className='footer__title'>{projects}</div>
-        <div className='footer__content'>Projects completed</div>
+      <div className='heroInfo'>
+        <div className='heroInfo-title'>{projects}</div>
+        <div className='heroInfo-content'>Projects completed</div>
       </div>
-      <div className='footer__sub-container'>
-        <div className='footer__title'>{technologies}</div>
-        <div className='footer__content'>Technologies mastered</div>
+      <div className='heroInfo'>
+        <div className='heroInfo-title'>{technologies}</div>
+        <div className='heroInfo-content'>Technologies mastered</div>
       </div>
-      <div className='footer__sub-container'>
-        <div className='footer__title'>{contest}</div>
+      <div className='heroInfo'>
+        <div className='heroInfo-title'>{contest}</div>
         {/* <div>Open Source Projects</div> */}
-        <div className='footer__content'>Coding contests</div>
+        <div className='heroInfo-content'>Coding contests</div>
       </div>
     </div>
   )

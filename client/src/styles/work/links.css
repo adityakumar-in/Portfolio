@@ -1,0 +1,31 @@
+
+.project-links {
+    display: flex;
+    border-top: 0.5px solid rgb(174, 174, 174);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.project-website-link, .project-github-link {
+    display: block;
+    background-color: rgb(65, 65, 65);
+    padding: 9px 12px;
+    border-radius: 50px;
+    transition: transform 0.5s box-shadow 0.5s;
+}
+.project-website-link:hover, .project-github-link:hover {
+    transform: translateY(-2px);
+    transition-duration: 0.5s;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.project-website-link:hover .link-icon, .project-github-link:hover .link-icon {
+    fill: var(--darkBackground);
+}
+.project-website-link:not(:hover), .project-github-link:not(:hover) {
+    transform: translateY(2px);
+    transition-duration: 0.5s;
+}

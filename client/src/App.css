@@ -11,18 +11,18 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #00ff9d;
+  background-color: var(--highlightedText);
   border-radius: 7px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
   background-color: #00cc7d;
+  cursor: pointer;
 }
 
 body::-webkit-scrollbar-track {
-  background-color: #1e1e1e;
+  background-color: var(--darkBackground);
 }
-
 body {
   font-family: "JetBrains Mono", monospace;
   background-color: var(--darkBackground);
@@ -34,6 +34,15 @@ body {
   padding: 2px;
 }
 .mainPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* width: 1178px; */
+  /* background-color: blue; */
   width: 70%;
   margin: 0 auto;
+}
+.full {
+  width: 100%;
+  margin: auto;
 }

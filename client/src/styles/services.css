@@ -1,53 +1,46 @@
-:root {
-    --darkBackground: #1d1c22;
-    --highlightedText: #03fd9b;
-    --text: #ffffff;
-    --selectedText: #df2e38;
-}
-
-.hollowFont {
-    font-size: 60px;
-    color: var(--darkBackground);
-    background-color: var(--darkBackground);
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-}
-.services__card:hover .hollowFont {
-    text-shadow: -1px -1px 0 var(--highlightedText), 1px -1px 0 var(--highlightedText), -1px 1px 0 var(--highlightedText), 1px 1px 0 var(--highlightedText);
-}
-.services__main {
+.services-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85vh;
+    height: 82vh;
     margin-top: 125px;
 }
-.services__container {
+.services {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
     align-items: center;
 }
-.services__card {
+.service-card {
     border-bottom: 0.5px solid rgb(93, 93, 93);
     width: 550px;
     box-sizing: border-box;
     margin: 20px 0;
     cursor: pointer;
 }
-.services__title {
+.service-number {
+    font-size: 70px;
+    font-weight: 750;
+    color: var(--darkBackground);
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+.service-title {
     font-size: 50px;
     font-weight: 700;
     margin: 20px 0;
 }
-.services__sub-title {
+.about-service {
     font-size: 20px;
     color: rgb(174, 174, 174);
     margin-bottom: 30px;
 }
-.services__card:hover .services__title {
+.short-service-text {
+    margin-bottom: 60px;
+}
+.service-card:hover .service-title {
     color: var(--highlightedText);
 }
-.l1 {
-    margin-bottom: 60px;
+.service-card:hover .service-number {
+    text-shadow: -1px -1px 0 var(--highlightedText), 1px -1px 0 var(--highlightedText), -1px 1px 0 var(--highlightedText), 1px 1px 0 var(--highlightedText);
 }

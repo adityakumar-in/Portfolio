@@ -1,37 +1,33 @@
-:root {
-    --darkBackground: #1d1c22;
-    --highlightedText: #03fd9b;
-    --text: #ffffff;
-}
-
 .navbar {
     position: fixed;
     top: 0;
     z-index: 5;
+    
+    width: 100%;
 }
-.navbar__header-flex {
+.navbar-title {
     display: flex;
     width: 127vh;
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
     background-color: var(--darkBackground);
+    /* background-color: red; */
 }
-.navbar__body {
+.navbar-body {
     display: flex;
     align-items: center;
-    /* float: right; */
 }
 
 /* Portfolio Title  */
-#name-suffix {
-    color: var(--highlightedText);
-}
 #name {
     cursor: pointer;
     font-size: 35px;
     box-sizing: border-box;
     color: white;
+}
+#name-suffix {
+    color: var(--highlightedText);
 }
 
 /* Different Options for the Navbar */
@@ -60,6 +56,9 @@ li {
     cursor: pointer;
     box-sizing: border-box;
 }
+.Link:active {
+    color: var(--highlightedText);
+}
 .active {
     border-bottom: 2px solid var(--highlightedText);
     cursor: pointer;
@@ -79,8 +78,8 @@ li {
     color: var(--highlightedText);
 }
 
-/* Navbar button  */
-.navbar__btn {
+/* Hire-me button  */
+.hire-me-button {
     background-color: var(--highlightedText);
     color: var(--darkBackground);
     padding: 12px 25px;
@@ -90,19 +89,12 @@ li {
     font-size: 18px;
     box-sizing: border-box;
 }
-
-.navbar__btn:hover {
+.hire-me-button:hover {
     transform: translateY(-2px);
     transition-duration: 0.5s;
     box-shadow: 0 10px 20px rgba(0, 255, 163, 0.2);
 }
-.navbar__btn:not(:hover) {
+.hire-me-button:not(:hover) {
     transform: translateY(2px);
     transition-duration: 0.5s;
-}
-
-
-
-.Link:active {
-    color: var(--highlightedText);
 }

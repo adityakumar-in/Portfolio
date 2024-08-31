@@ -1,65 +1,89 @@
-import { React, useRef, useEffect } from 'react'
-import '../styles/project.css'
+import { React, useState } from 'react'
+import ProjectCard from './ProjectCard'
+import '../styles/work/project.css'
 
-const Project = ({ No, title, about, technologies, img, link, github, next, setNext, totalProjects }) => {
-  const pro = useRef(null)
+const Project = () => {
+  const totalProjects = 8
+  const [next, setNext] = useState(1)
 
-  const prevProject = () => {
-    return new Promise(async (resolve, reject) => {
-      setTimeout(() => {
-        pro.current.classList.toggle('animate')
-        if(next-1 < 1) setNext(totalProjects)
-        else setNext((next - 1))
-      }, 500)
-
-      setTimeout(() => {
-        pro.current.classList.toggle('animate')
-      }, 1)
-
-      resolve()
-    })
-  }
-  const nextProject = () => {
-    return new Promise(async (resolve, reject) => {
-      setTimeout(async () => {
-        await pro.current.classList.toggle('animate')
-        if(next+1 > totalProjects) await setNext(1)
-        else await setNext((next + 1))
-      }, 500)
-
-      setTimeout(() => {
-        pro.current.classList.toggle('animate')
-      }, 1)
-
-      resolve()
-    })  
+  const Projects = {
+    1: {
+      No: '01',
+      title: 'Expense Tracker',
+      about: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, corporis inventore quia corrupti, quidem fugiat omnis deserunt iusto animi optio dolorum harum alias eum doloribus vel.',
+      technologies: ['React Js', 'CSS', 'MongoDB', 'Express Js'],
+      img: 'proj1.png',
+      link: 'https://www.google.com/',
+      github: 'https://www.facebook.com/'
+    },
+    2: {
+      No: '02',
+      title: 'Weather Forecast',
+      about: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, corporis inventore quia corrupti, quidem fugiat omnis deserunt iusto animi optio dolorum harum alias eum doloribus vel.',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'API'],
+      img: 'proj1.png',
+      link: 'https://www.google.com/',
+      github: 'https://www.facebook.com/'
+    },
+    3: {
+      No: '03',
+      title: 'Quiz Website',
+      about: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, corporis inventore quia corrupti, quidem fugiat omnis deserunt iusto animi optio dolorum harum alias eum doloribus vel.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      img: 'proj1.png',
+      link: 'https://www.google.com/',
+      github: 'https://www.facebook.com/'
+    },
+    4: {
+      No: '04',
+      title: 'Toder',
+      about: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, corporis inventore quia corrupti, quidem fugiat omnis deserunt iusto animi optio dolorum harum alias eum doloribus vel.',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Local Storage'],
+      img: 'proj1.png',
+      link: 'https://www.google.com/',
+      github: 'https://www.facebook.com/'
+    },
+    5: {
+      No: '05',
+      title: 'Pronsica',
+      about: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, corporis inventore quia corrupti, quidem fugiat omnis deserunt iusto animi optio dolorum harum alias eum doloribus vel.',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Node Js'],
+      img: 'proj1.png',
+      link: 'https://www.google.com/',
+      github: 'https://www.facebook.com/'
+    },
+    6: {
+      No: '06',
+      title: 'Twitter(X) Clone',
+      about: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, corporis inventore quia corrupti, quidem fugiat omnis deserunt iusto animi optio dolorum harum alias eum doloribus vel.',
+      technologies: ['HTML', 'Tailwind'],
+      img: 'proj1.png',
+      link: 'https://www.google.com/',
+      github: 'https://www.facebook.com/'
+    },
+    7: {
+      No: '07',
+      title: 'Musical Wizard App',
+      about: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, corporis inventore quia corrupti, quidem fugiat omnis deserunt iusto animi optio dolorum harum alias eum doloribus vel.',
+      technologies: ['Android', 'Kotlin'],
+      img: 'proj1.png',
+      link: 'https://www.google.com/',
+      github: 'https://www.facebook.com/'
+    },
+    8: {
+      No: '08',
+      title: 'Unit Converter',
+      about: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, corporis inventore quia corrupti, quidem fugiat omnis deserunt iusto animi optio dolorum harum alias eum doloribus vel.',
+      technologies: ['Python', 'Tkinter'],
+      img: 'proj1.png',
+      link: 'https://www.google.com/',
+      github: 'https://www.facebook.com/'
+    }
   }
 
   return (
-    <div className='pro__cover slide'>
-      <div onClick={prevProject} className='changeSlide'><svg xmlns="http://www.w3.org/2000/svg" className='rotate' height="40px" viewBox="0 -960 960 960" width="40px" fill="#D9D9D9"><path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z"/></svg></div>  
-      <div ref={pro}>
-        <div className='project'>
-          <div className='project__left'>
-            <div className='left__card'>
-              <div className='project__number'>{No}</div>
-              <div className='project__title'>{title}</div>
-              <div className='project__content'>{about}</div>
-              <div>{technologies.map((technology, i) => (<span className='tag' key={i}>{technology}</span>))}</div>
-            </div> 
-            <div className='right__card'>
-              <div className="project__link" onClick={()=>{window.open(link, '_blank')}}><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#FFFFFF"><path d="m223.19-201.15-22.04-22.04L667-688.65H361.5v-30.2h357.73v357.73h-30.19V-667.5L223.19-201.15Z"/></svg></div>
-              <div className="project__github" onClick={()=>{window.open(github, '_blank')}}><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg></div>
-            </div>
-          </div>
-          <div className='project__right'>
-            <div className="hang">Do Visit</div>
-            <img src={img} alt="Project Preview" />
-          </div>
-        </div>
-      </div>
-        
-      <div onClick={nextProject} className='changeSlide'><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#D9D9D9"><path d="m320-116-34-34 330-330-330-330 34-34 364 364-364 364Z"/></svg></div>  
+    <div className='slider'>
+        <ProjectCard {...Projects[next]} next={next} setNext={setNext} totalProjects={totalProjects}/>
     </div>
   )
 }

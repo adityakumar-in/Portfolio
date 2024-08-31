@@ -1,0 +1,45 @@
+.about-me {
+    visibility: visible;
+}
+.about-me-title {
+    font-size: 26px;
+    font-weight: 700;
+}
+.about-me-caption {
+    font-size: 16px;
+    font-weight: 200;
+    color: rgb(174, 174, 174);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-right: 16px;
+    line-height: 1.8;
+}
+.about-me-card {
+    display: flex;
+    text-align: left;
+    margin-right: 90px;
+    justify-content: space-between;
+}
+.about-me-info {
+    text-align: left;
+    width: 50%;
+    margin: 10px 0;
+    font-size: 14px;
+    color: rgb(174, 174, 174);
+    display: flex;
+    align-items: center;
+}
+.about-me-info-link {
+    text-align: left;
+    margin-left: 15px;
+    font-size: 18px;
+    color: white;
+    font-weight: 200;
+}
+.about-me-info:hover {
+    color: var(--highlightedText);
+    cursor: pointer;
+}
+.about-me-info-link:hover, .about-me-info:hover .about-me-info-link {
+    color: var(--selectedText);
+}

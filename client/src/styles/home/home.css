@@ -1,0 +1,43 @@
+/* Universal Style for Home */
+.hero-container {
+    display: flex;
+    height: 72vh;
+    flex-wrap: wrap-reverse;
+    margin-top: 125px;
+    background-color: transparent;
+}
+.aboutHero-container {
+    width: 55%;
+    margin: auto;
+}
+.heroImage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 45%;
+    margin: auto;
+    height: 56vh;
+    border-radius: 300px;
+}
+
+/* About Hero Style */
+.hero-profession {
+    font-size: 22px;
+    margin-bottom: 7px;
+    color: rgb(209, 209, 209);
+}
+.hero-intro, .hero-name {
+    font-size: 80px;
+    font-weight: 700;
+}
+.hero-name {
+    color: var(--highlightedText);
+    margin-bottom: 30px;
+}
+.about-hero-profession {
+    width: 80%;
+    line-height: 2;
+    font-size: 16px;
+    color: rgb(165, 165, 165);
+}

@@ -1,0 +1,60 @@
+.hero-links {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+.hero-cv {
+    background-color: var(--darkBackground);
+    
+    border: 1px solid var(--highlightedText);
+    border-radius: 50px;
+    padding: 16px 31px;
+    cursor: pointer;
+}
+.hero-cv-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--highlightedText);
+    gap: 7px;
+}
+
+.hero-cv:hover {
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+    color: var(--selectedText);
+    border: 1px solid var(--selectedText);
+}
+.hero-cv:hover .hero-cv-text {
+    color: var(--selectedText);
+}
+.hero-cv:hover svg {
+    fill: var(--selectedText);
+}
+
+.hero-socials {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    background-color: var(--darkBackground);
+    border: 1px solid var(--highlightedText);
+    border-radius: 50px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.hero-socials:hover svg {
+    fill: var(--selectedText);
+    background-color: var(--darkBackground);
+}
+.hero-socials:hover {
+    border: 1px solid var(--selectedText);
+    color: var(--selectedText);
+
+    transform: translateY(-2px);
+    transition-duration: 0.5s;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+.hero-socials:not(:hover) {
+    transform: translateY(2px);
+    transition-duration: 0.5s;
+}

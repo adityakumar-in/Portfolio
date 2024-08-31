@@ -1,0 +1,28 @@
+@keyframes boom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.98);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate {
+    animation: boom 1s linear;
+}
+.change-project-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 73vh;
+    padding: 18px 10px;
+}
+.change-project-arrow:hover {
+    cursor: pointer;
+}
+.rotateLeftArrow {
+    transform: rotate(180deg);
+}

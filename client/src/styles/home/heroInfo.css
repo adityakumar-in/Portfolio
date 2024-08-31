@@ -1,18 +1,19 @@
-.footer__container {
+.heroInfo-container {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     margin: 0 auto;
 }
-.footer__sub-container {
+.heroInfo {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-.footer__title {
+.heroInfo-title {
     font-size: 70px;
     font-weight: 900;
 }
-.footer__content {
+.heroInfo-content {
     font-size: 18px;
     color: rgb(165, 165, 165);
     display: flex;

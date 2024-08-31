@@ -3,7 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Resume from './components/Resume'
-import Work from './components/Work'
+import Project from './components/Project'
 import Contact from './components/Contact'
 import Services from './components/Services'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -12,7 +12,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <><Navbar /><Home /><Work /><Services /><Resume /><Contact /></>
+      element: <><Navbar /><Home /><Project /><Services /><Resume /><Contact /></>
     },
     {
       path: "/home",
@@ -28,7 +28,7 @@ function App() {
     },
     {
       path: "/work",
-      element: <><Navbar /><Work /></>
+      element: <><Navbar /><Project /></>
     },
     {
       path: "/contact",
@@ -37,9 +37,10 @@ function App() {
   ])
 
   return (
-    <div className='mainPage'>
-    
-    <RouterProvider router={router} />
+    <div className='full'>
+      <div className='mainPage'>
+        <RouterProvider router={router} />
+      </div>
     </div>
   )
 }

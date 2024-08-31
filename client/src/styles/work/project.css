@@ -1,0 +1,47 @@
+/* Project.jsx  */
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* ProjectCard.jsx  */
+.project-container {
+    margin-top: 125px;
+    height: 77vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+.project {
+    display: flex;
+    background-color: rgba(86, 86, 86, 0.15);
+    width: 100%;
+    border-radius: 10px;
+}
+.project-info-container {
+    width: 55%;
+    padding: 0 20px;
+    padding-top: 10px;
+}
+
+/* Project Info Styles */
+.project-number {
+    font-size: 70px;
+    font-weight: 750;
+    color: rgb(48, 48, 55);
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+.project-title {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+.about-project {
+    font-size: 16px;
+    color: rgb(174, 174, 174);
+    margin-bottom: 20px;
+    line-height: 2;
+}

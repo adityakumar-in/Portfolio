@@ -30,16 +30,16 @@ const Services = () => {
   ]
 
   const Service = ({ No, service, detail, short }) => (
-    <div className='services__card'>
-      <div className='hollowFont'>{No}</div>
-      <div className='services__title'>{service}</div>
-      <div className={short ? 'services__sub-title l1' : 'services__sub-title'}>{detail}</div>
+    <div className='service-card'>
+      <div className='service-number'>{No}</div>
+      <div className='service-title'>{service}</div>
+      <div className={short ? 'about-service short-service-text' : 'about-service'}>{detail}</div>
     </div>
   )
 
   return (
-    <div className='services__main'>
-      <div className='services__container'>
+    <div className='services-container'>
+      <div className='services'>
         {serviceDetails.map((serviceDetail, i) => (
           <Service key={i} {...serviceDetail} />
         ))}

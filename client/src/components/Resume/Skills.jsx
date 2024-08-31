@@ -1,4 +1,6 @@
 import React from 'react'
+import '../../styles/resume/skills.css'
+import '../../styles/resume/skillCard.css'
 
 const Skills = () => {
     const skillDetails = [
@@ -49,15 +51,15 @@ const Skills = () => {
     ]
 
     const SkillCard = ({ svg, canva }) => (
-        <div className={canva ? 'skills__svg canva' : 'skills__svg'}>{svg}</div>
+        <div className={canva ? 'skill-svg canva' : 'skill-svg'}>{svg}</div>
     )
     
   return (
     <div className="skills">
-      <div className='skills__title'>My skills</div>
-      <div className='skills__sub-title'>I have strong skills in Web Development, and I am confident in my ability to deliver high-quality results.</div>
+      <div className='skills-title'>My skills</div>
+      <div className='skills-caption'>I have strong skills in Web Development, and I am confident in my ability to deliver high-quality results.</div>
 
-      <div className='skills__cards'>
+      <div className='skill-card'>
         {skillDetails.map((skillDetail, i) => (
             <SkillCard key={i} {...skillDetail} />
         ))}

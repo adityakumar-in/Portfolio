@@ -1,0 +1,23 @@
+.skills {
+    visibility: visible;
+}
+.skills-title {
+    font-size: 26px;
+    font-weight: 700;
+}
+.skills-caption {
+    width: 80%;
+    font-size: 16px;
+    font-weight: 200;
+    color: rgb(174, 174, 174);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-right: 16px;
+    line-height: 2;
+}
+.skill-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}

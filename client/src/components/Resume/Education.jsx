@@ -1,4 +1,6 @@
 import React from 'react'
+import '../../styles/resume/experienceEducation.css'
+import '../../styles/resume/expEduCard.css'
 
 const Education = () => {
   const EducationDetails = [
@@ -23,18 +25,18 @@ const Education = () => {
   ]
 
   const EducationCard = ({ year, course, org, short }) => (
-    <div className={short ? 'education__card m' : 'education__card'}>
-      <div className='education__year'>{year}</div>
+    <div className='education-card'>
+      <div className='education-year'>{year}</div>
       <div>{course}</div>
-      <div className={short ? 'education__org c' : 'education__org'}>{org}</div>
+      <div className={short ? 'education-org short-text' : 'education-org'}>{org}</div>
     </div>
   )
 
   return (
     <div className="education">
-      <div className='education__title'>My education</div>
-      <div className='education__sub-title'>Education equips skills and knowledge for this role. Eager to apply academic background to real-world projects.</div>
-      <div className='education__cards'>
+      <div className='education-title'>My education</div>
+      <div className='education-caption'>Education equips skills and knowledge for this role. Eager to apply academic background to real-world projects.</div>
+      <div className='education-cards-container'>
         {EducationDetails.map((educationDetail, i) => (
           <EducationCard key={i} {...educationDetail} />
         ))}

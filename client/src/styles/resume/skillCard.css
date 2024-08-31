@@ -1,0 +1,30 @@
+.skill-svg {
+    padding: 30px 40px;
+    background-color: rgb(58 59 65 / 52%);
+    width: fit-content;
+    border-radius: 7px;
+    transition: transform 0.5s box-shadow 0.5s;
+}
+.skill-svg > svg {
+    width: 60px;
+    height: 60px;
+    fill: white;
+}
+.skill-svg:hover > svg, .skill-svg:hover > svg > g, .skill-svg:hover > svg > g > circle, .skill-svg:hover > svg > path {
+    width: 60px;
+    height: 60px;
+    fill: var(--highlightedText);
+}
+.skill-svg:hover {
+    transform: translateY(-2px);
+    transition-duration: 0.5s;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.321);
+}
+.skill-svg:not(:hover) {
+    transform: translateY(2px);
+    transition-duration: 0.5s;
+}
+.canva:hover > svg > path {
+    fill: #1d1c22;
+}

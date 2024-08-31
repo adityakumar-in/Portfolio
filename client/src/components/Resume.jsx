@@ -1,9 +1,9 @@
 import { React, useState } from 'react'
-import '../styles/resume.css'
 import Education from './Resume/Education'
 import Experience from './Resume/Experience'
 import AboutMe from './Resume/AboutMe'
 import Skills from './Resume/Skills'
+import '../styles/resume/resume.css'
 
 const Resume = () => {
   const [exp, setExp] = useState(true)
@@ -41,16 +41,16 @@ const Resume = () => {
 
   return (
     <div className='resume'>
-      <div className="Resume__Left">
-        <div className='resume__title'>Why hire me?</div>
-        <div className='resume__sub-title'>My passion, skills, and experience make me the ideal candidate.</div>
-        <div className={exp ? 'resume__btn active-r' : 'resume__btn passive-r'} onClick={onExperience}>Experience</div>
-        <div className={edu ? 'resume__btn active-r' : 'resume__btn passive-r'} onClick={onEducation}>Education</div>
-        <div className={skl ? 'resume__btn active-r' : 'resume__btn passive-r'} onClick={onSkills}>Skills</div>
-        <div className={abt ? 'resume__btn active-r' : 'resume__btn passive-r'} onClick={onAbout}>About me</div>
+      <div className="hero-info-options">
+        <div className='resume-title'>Why hire me?</div>
+        <div className='resume-caption'>My passion, skills, and experience make me the ideal candidate.</div>
+        <div className={exp ? 'hero-info-option active-option' : 'hero-info-option passive-option'} onClick={onExperience}>Experience</div>
+        <div className={edu ? 'hero-info-option active-option' : 'hero-info-option passive-option'} onClick={onEducation}>Education</div>
+        <div className={skl ? 'hero-info-option active-option' : 'hero-info-option passive-option'} onClick={onSkills}>Skills</div>
+        <div className={abt ? 'hero-info-option active-option' : 'hero-info-option passive-option'} onClick={onAbout}>About me</div>
       </div>
 
-      <div className="Resume__Right">
+      <div className="hero-info">
         {exp && <Experience />}
         {edu && <Education />}
         {skl && <Skills />}

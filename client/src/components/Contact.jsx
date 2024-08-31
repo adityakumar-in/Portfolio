@@ -1,5 +1,8 @@
 import { React, useState, useEffect, useRef } from 'react'
-import '../styles/contact.css'
+import '../styles/contact/contact.css'
+import '../styles/contact/dropDown.css'
+import '../styles/contact/links.css'
+import '../styles/contact/form.css'
 
 const Contact = () => {
   const [inpActive, setInpActive] = useState('')
@@ -7,30 +10,6 @@ const Contact = () => {
   const [select, setSelect] = useState('Web Development')
   const dropDownRef = useRef()
   const selectRef = useRef(null)
-
-  useEffect(() => {
-    dropDownRef.current.value = {select}
-  }, [dropDown])
-  
-  const showHideDropDown = () => {
-    selectRef.current.classList.toggle('hide');
-    selectRef.current.classList.toggle('show');
-  }
-  const removeDropDown = () => {
-    selectRef.current.classList.add('hide');
-    selectRef.current.classList.remove('show');
-  }
-
-  const DropDown = () => (
-    <>
-      <div className='dTitle'>Select your domain</div>
-      <div className='opt' onClick={()=>{setDropDown(false); setSelect('Web Development');}}>Web Development</div>
-      <div className='opt' onClick={()=>{setDropDown(false); setSelect('UI/UX Desing');}}>UI/UX Design</div>
-      <div className='opt' onClick={()=>{setDropDown(false); setSelect('Content Creation');}}>Content Creation</div>
-      <div className='opt' onClick={()=>{setDropDown(false); setSelect('Tutoring');}}>Tutoring</div>
-      <div className='opt' onClick={()=>{setDropDown(false); setSelect('Others');}}>Others</div>
-    </>
-  )
 
   const contactDetails = [
     {
@@ -53,55 +32,86 @@ const Contact = () => {
     },
   ]
 
+  useEffect(() => {
+    dropDownRef.current.value = {select}
+  }, [dropDown])
+  
+  const showHideDropDown = () => {
+    selectRef.current.classList.toggle('hide-options');
+    selectRef.current.classList.toggle('show-options');
+  }
+  const removeDropDown = () => {
+    selectRef.current.classList.add('hide-options');
+    selectRef.current.classList.remove('show-options');
+  }
+
+  const DropDownOptions = () => (
+    <>
+      <div className='options-caption'>Select your domain</div>
+      <div className='options' onClick={()=>{setDropDown(false); setSelect('Web Development');}}>Web Development</div>
+      <div className='options' onClick={()=>{setDropDown(false); setSelect('UI/UX Desing');}}>UI/UX Design</div>
+      <div className='options' onClick={()=>{setDropDown(false); setSelect('Content Creation');}}>Content Creation</div>
+      <div className='options' onClick={()=>{setDropDown(false); setSelect('Tutoring');}}>Tutoring</div>
+      <div className='options' onClick={()=>{setDropDown(false); setSelect('Others');}}>Others</div>
+    </>
+  )
+  
   const ContactCard = ({icon, name, info, link}) => (
     <div className='contact-card'>
       <div>{icon}</div>
       <div>
         <div>{name}</div>
-        <div id='insta' onClick={()=>{window.open(link, '_blank')}}>{info}</div>
+        <div id='link-icon' onClick={()=>{window.open(link, '_blank')}}>{info}</div>
+      </div>
+    </div>
+  )
+
+  const ContactCards = () => (
+    <div className='contact-details'>
+      <div>
+        {contactDetails.map((contactDetail, index) => (
+          <ContactCard key={index} {...contactDetail} />
+        ))}
       </div>
     </div>
   )
 
   return (
-    <div className='contact__container'>
-
-      <div className='Contact__Left'>
-        <div className="card" onMouseLeave={removeDropDown}>
-          <div className='contact__title'>Let's work together</div>
-          <div className='contact__sub-title'>Fill your details below</div>
+    <div className='user-container'>
+      <div className='collaboration-container'>
+        <div className="collaboration-form-card" onMouseLeave={removeDropDown}>
+          <div className='collab-card-title'>Let's work together</div>
+          <div className='collab-card-caption'>Fill your details below</div>
 
           <form action="">
-            <div className='dev'>
-              <input type="text" placeholder='Name' onFocus={()=>{setInpActive('name')}}  onBlur={()=>{setInpActive('')}} id={inpActive==='name' && 'active-outline'} />
-              <input type="text" placeholder='Project Name' onFocus={()=>{setInpActive('project')}}  onBlur={()=>{setInpActive('')}} id={inpActive==='project' && 'active-outline'} />
+
+            <div className='input-container'>
+              <input type="text" className='input-text' placeholder='Name' onFocus={()=>{setInpActive('name')}}  onBlur={()=>{setInpActive('')}} id={inpActive==='name' && 'active-input'} />
+              <input type="text" className='input-text' placeholder='Project Name' onFocus={()=>{setInpActive('project')}}  onBlur={()=>{setInpActive('')}} id={inpActive==='project' && 'active-input'} />
             </div>
-            <div className='dev'>
-              <input type="number" placeholder='Phone No.' onFocus={()=>{setInpActive('phone')}}  onBlur={()=>{setInpActive('')}} id={inpActive==='phone' && 'active-outline'} />
-              <input type="mail" required placeholder='E-mail' onFocus={()=>{setInpActive('mail')}}  onBlur={()=>{setInpActive('')}}  id={inpActive==='mail' && 'active-outline'} />
+
+            <div className='input-container'>
+              <input type="number" className='input-number' placeholder='Phone No.' onFocus={()=>{setInpActive('phone')}}  onBlur={()=>{setInpActive('')}} id={inpActive==='phone' && 'active-input'} />
+              <input type="mail" className='input-mail' required placeholder='E-mail' onFocus={()=>{setInpActive('mail')}}  onBlur={()=>{setInpActive('')}}  id={inpActive==='mail' && 'active-input'} />
             </div>
-            <div className='dropDown' onClick={()=>{setInpActive('drop');setDropDown(true); showHideDropDown()}}  onMouseLeave={()=>{setInpActive('')}}  id={inpActive==='drop' && 'active-outline'}>
+
+            <div className='drop-down-container' onClick={()=>{setInpActive('drop');setDropDown(true); showHideDropDown()}}  onMouseLeave={()=>{setInpActive('')}}  id={inpActive==='drop' && 'active-input'}>
               <div ref={dropDownRef}>{select}</div>
               <div><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#B7B7B7"><path d="M480-380 276-584l20-20 184 184 184-184 20 20-204 204Z"/></svg></div>
 
-              <div className='down hide' ref={selectRef}>
-                {dropDown && <DropDown />}
+              <div className='drop-down hide-options' ref={selectRef}>
+                {dropDown && <DropDownOptions />}
               </div>
             </div>
 
-            <textarea name="message" onFocus={()=>{setInpActive('tarea')}} onBlur={()=>{setInpActive('')}} id={inpActive==='tarea' && 'active-outline'} cols="30" rows="7" placeholder='Enter your project details here'></textarea>
-            <input type="button" value="Send message" />
+            <textarea name="message" className='project-detail-input' onFocus={()=>{setInpActive('tarea')}} onBlur={()=>{setInpActive('')}} id={inpActive==='tarea' && 'active-input'} cols="30" rows="7" placeholder='Enter your project details here'></textarea>
+            <input type="button" className='submit-button' value="Send message" />
+            
           </form>
         </div>
       </div>
 
-      <div className='Contact__Right'>
-        <div>
-          {contactDetails.map((contactDetail, index) => (
-            <ContactCard key={index} {...contactDetail} />
-          ))}
-        </div>
-      </div>
+      <ContactCards />
     </div>
   )
 }

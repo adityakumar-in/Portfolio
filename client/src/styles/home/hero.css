@@ -1,0 +1,25 @@
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hero St */
+#hero {
+    width: 100%;
+    border-radius: 350px;
+    margin: auto;
+    background-color: transparent;
+}
+#heroFrame {
+    position: absolute;
+    z-index: 0;
+    width: 32%;
+    margin-left: 1px;
+    margin-top: 5px;
+    background-color: transparent;
+    animation: rotate 20s linear infinite;
+}
