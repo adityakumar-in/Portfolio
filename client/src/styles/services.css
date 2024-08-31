@@ -1,5 +1,6 @@
 .services-container {
     margin-top: 125px;
+    width: 100%;
 }
 .services {
     display: flex;
@@ -8,10 +9,12 @@
     gap: 50px;
     width: 100%;
     align-items: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
 }
 .service-card {
     border-bottom: 0.5px solid rgb(93, 93, 93);
-    width: 550px;
+    width: 530px;
     box-sizing: border-box;
     margin: 20px 0;
     cursor: pointer;
@@ -31,6 +34,8 @@
     font-size: 20px;
     color: rgb(174, 174, 174);
     margin-bottom: 30px;
+    box-sizing: border-box;
+    padding: 0 5px;
 }
 .short-service-text {
     margin-bottom: 60px;

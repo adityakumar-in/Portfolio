@@ -26,3 +26,14 @@
 .rotateLeftArrow {
     transform: rotate(180deg);
 }
+
+
+@media screen and (max-width: 500px) {
+    .change-project-arrow > svg {
+        width: 30px;
+        height: 30px;
+    }
+    .change-project-arrow {
+        padding: 18px 0;
+    }
+}

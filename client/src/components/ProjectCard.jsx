@@ -54,10 +54,12 @@ const ProjectCard = ({ No, title, about, technologies, img, link, github, next, 
 
   const ProjectInfo = () => (
     <div className='project-info'>
-      <div className='project-number'>{No}</div>
-      <div className='project-title'>{title}</div>
+      <div className='project-no-title'>
+        <div className='project-number'>{No}</div>
+        <div className='project-title'>{title}</div>
+      </div>
       <div className='about-project'>{about}</div>
-      <div>{technologies.map((technology, i) => (<ProjectTag i={i} technology={technology} />))}</div>
+      <div className='tags'>{technologies.map((technology, i) => (<ProjectTag i={i} technology={technology} />))}</div>
     </div> 
   )
 

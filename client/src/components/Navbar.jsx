@@ -10,11 +10,11 @@ const Navbar = () => {
 
   const HamburgerDropdown = () => (
     <div className='option-cover'>
-      <div className='option' onClick={()=>{setDropDown(false); removeDropDown()}}><Link className='hamburger-link' to="/home"><li className='hamburger-link'>Home</li></Link></div>
-      <div className='option' onClick={()=>{setDropDown(false); removeDropDown()}}><Link className='hamburger-link' to="/work"><li className='hamburger-link'>Work</li></Link></div>
-      <div className='option' onClick={()=>{setDropDown(false); removeDropDown()}}><Link className='hamburger-link' to="/services"><li className='hamburger-link'>Services</li></Link></div>
-      <div className='option' onClick={()=>{setDropDown(false); removeDropDown()}}><Link className='hamburger-link'  to="/resume"><li className='hamburger-link'>Resume</li></Link></div>
-      <div className='option last-option' onClick={()=>{setDropDown(false); removeDropDown()}}><Link className='hamburger-link'  to="/contact"><li className='hamburger-link'>Contact</li></Link></div>     
+      <div className={path==='/home' ? "option active-option" : "option"} onClick={()=>{setDropDown(false); removeDropDown()}}><Link className='hamburger-link' to="/home"><li className={path==='/home' ? "hamburger-link active-ham" : "hamburger-link"}>Home</li></Link></div>
+      <div className={path==='/work' ? "option active-option" : "option"}  onClick={()=>{setDropDown(false); removeDropDown()}}><Link className='hamburger-link' to="/work"><li className={path==='/work' ? "hamburger-link active-ham" : "hamburger-link"}>Work</li></Link></div>
+      <div className={path==='/services' ? "option active-option" : "option"}  onClick={()=>{setDropDown(false); removeDropDown()}}><Link className='hamburger-link' to="/services"><li className={path==='/services' ? "hamburger-link active-ham" : "hamburger-link"}>Services</li></Link></div>
+      <div  className={path==='/resume' ? "option active-option" : "option"}  onClick={()=>{setDropDown(false); removeDropDown()}}><Link className='hamburger-link'  to="/resume"><li className={path==='/resume' ? "hamburger-link active-ham" : "hamburger-link"}>Resume</li></Link></div>
+      <div className={path==='/contact' ? "option active-option last-active-ham" : "option last-option"} onClick={()=>{setDropDown(false); removeDropDown()}}><Link className='hamburger-link'  to="/contact"><li className={path==='/contact' ? "hamburger-link last-active-ham" : "hamburger-link"}>Contact</li></Link></div>     
     </div>
   )
 

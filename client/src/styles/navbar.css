@@ -103,30 +103,25 @@
     transition-duration: 0.5s;
 }
 
-@media screen and (max-width: 1050px) {
-    .navbar-body {
-        display: none;
-    }
-    
-    .hamburger-icon {
-        display: block;
-        padding-bottom: 7px;
-    }
-}
 
-
-
-
-
-
+/* Hamburger Style  */
 .hamburger-link {
     text-decoration: none;
     outline: none;
     color: rgb(207, 207, 207);
     width: 100%;
     cursor: pointer;
-    padding: 35px 0;
+    padding: 30px 0;
     list-style: none;
+}
+.active-ham {
+    color: var(--darkBackground);
+    font-weight: 700;
+}
+.last-active-ham {
+    color: var(--darkBackground);
+    font-weight: 700;
+    border-bottom-left-radius: 7px;
 }
 .hamburger-link:hover {
     color: var(--darkBackground);
@@ -136,23 +131,20 @@ Link {
     outline: none;
     text-decoration: none;
 }
-
-
 .hide-options {
     visibility: hidden;
 }
 .show-options {
     visibility: visible;
 }
-
 .hamburger-drop-down {
     position: absolute;
     z-index: 4;
-    top: 115px;
+    top: 95px;
     right: 6px;
     display: flex;
     flex-direction: column;
-    width: 339px;
+    width: 250px;
     justify-content: center;
     align-items: center;
     border-bottom-left-radius: 7px;
@@ -160,7 +152,7 @@ Link {
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .option {
-    font-size: 24px;
+    font-size: 19px;
     width: 100%;
     text-align: center;
 }
@@ -173,7 +165,44 @@ Link {
     font-weight: 700;
 }
 .option-cover {
-    color: rgb(207, 207, 207);
+    /* color: rgb(207, 207, 207); */
     text-align: left;
     width: 100%;
+}
+.active-option {
+    background-color: var(--highlightedText);
+    font-weight: 500;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 1050px) {
+    .navbar-body {
+        display: none;
+    }
+    
+    .hamburger-icon {
+        display: block;
+        padding-bottom: 7px;
+    }
+    .hamburger-icon > svg {
+        width: 45px;
+        height: 45px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #name {
+        font-size: 28px;
+    }
+    .hamburger-icon > svg {
+        width: 40px;
+        height: 40px;
+    }
+    .hamburger-drop-down {
+        width: 50%;
+    }
+    .hamburger-link {
+        padding: 20px 0;
+        font-size: 16px;
+    }
 }
