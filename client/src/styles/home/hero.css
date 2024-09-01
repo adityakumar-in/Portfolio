@@ -8,18 +8,60 @@
 }
 
 /* Hero St */
-#hero {
-    width: 100%;
+/* #hero {
     border-radius: 350px;
-    margin: auto;
+    position: absolute;
+    z-index: -1;
+    width: 34%;
+    min-width: 418px;
     background-color: transparent;
+} */
+/* #heroFrame {
+    position: absolute;
+    z-index: 0;
+    width: 35%;
+    min-width: 418px;
+    background-color: transparent;
+    animation: rotate 20s linear infinite;
+    margin: 10px 0;
+    border-radius: 200px;
+} */
+
+#hero {
+    position: absolute;
+    z-index: 0;
+    width: 35vw; /* Use viewport width for responsiveness */
+    height: 35vw; /* Same as width for a circle */
+    min-width: 418px;
+    min-height: 418px; /* Ensure minimum height matches minimum width */
+    background-color: transparent;
+    margin: 10px 0;
 }
 #heroFrame {
     position: absolute;
     z-index: 0;
-    width: 32%;
-    margin-left: 1px;
-    margin-top: 5px;
+    width: 35vw; /* Use viewport width for responsiveness */
+    height: 35vw; /* Same as width for a circle */
+    min-width: 418px;
+    min-height: 418px; /* Ensure minimum height matches minimum width */
     background-color: transparent;
     animation: rotate 20s linear infinite;
+    margin: 10px 0;
+    border-radius: 50%; /* Make it circular */
 }
+
+@media screen and (max-width: 630px) {
+    #hero, #heroFrame {
+        min-width: 0px;
+        min-height: 0px; /* Ensure minimum height is also set */
+        width: 75vw; /* Use viewport width for responsiveness */
+        height: 75vw; /* Same as width for a circle */
+    }
+}
+
+/* @media screen and (max-width: 630px) {
+    #hero, #heroFrame {
+        min-width: 0px;
+        width: 75%;
+    }
+} */

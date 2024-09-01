@@ -46,7 +46,7 @@ const Navbar = () => {
               <div className='hamburger-drop-down hide-options' ref={selectRef}>
                 {dropDown && <HamburgerDropdown />}
               </div>
-            </div>
+        </div>
 
     </div>  
   )

@@ -1,20 +1,35 @@
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99vw;
+    height: 70vh;
+    margin-top: 125px;
+}
 .user-container {
     display: flex;
-    height: 84vh;
+    height: 79vh;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 125px;
+    justify-content: center;
+    width: 1241px;
+    box-sizing: border-box;
 }
 .collaboration-container {
     display: flex;
     align-items: center;
-    width: 50%;
+    justify-content: center;
+    min-width: 550px;
+    margin: 0 20px;
+    width: 49%;
+    box-sizing: border-box;
 }
 .collaboration-form-card {
     border-radius: 10px;
     padding: 40px 30px;
-    width: 550px;
-    height: 635px;
+    
+    width: 99%;
+    height: fit-content;
     box-sizing: border-box;
     background-color: rgba(62, 62, 62, 0.521);
     transition: transform 0.5s box-shadow 0.5s;
@@ -30,6 +45,7 @@
 }
 .collab-card-title {
     font-size: 32px;
+    font-weight: 500;
     color: var(--highlightedText);
 }
 .collab-card-caption {
@@ -37,4 +53,49 @@
     margin-bottom: 15px;
     font-size: 16px;
     color: rgb(160, 160, 160);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1059px) {
+    .collaboration-container {
+        margin-top: 40px;
+        min-width: 564px;
+        height: fit-content;
+    }
+}
+@media screen and (max-width: 700) {
+    .collaboration-form-card {
+        background-color: red;
+        height: fit-content;
+    }
+}
+@media screen and (max-width: 600px) {
+    .collaboration-container {
+        min-width: 0px;
+        width: 99%;
+        height: fit-content;
+    }
+    .project-detail-input {
+        font-size: 16px;
+        height: 130px;
+    }
+}
+@media screen and (max-width: 474px) {
+    .collab-card-title {
+        font-size: 22px;
+    }
+    .collab-card-caption {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-left: 2px;
+        margin-bottom: 5px;
+    }
+    .collaboration-form-card {
+        padding: 30px 15px;
+        height: fit-content;
+    }
+    .contact-container {
+        margin-top: 105px;
+        height: fit-content;
+    }
 }

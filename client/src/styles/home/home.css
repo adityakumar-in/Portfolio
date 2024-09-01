@@ -1,24 +1,39 @@
 /* Universal Style for Home */
+.hero-cover {
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .hero-container {
     display: flex;
-    height: 72vh;
+    height: fit-content;
+    width: 1254px;
     flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
     margin-top: 125px;
     background-color: transparent;
+    /* background-color: yellow; */
+    padding: 0 5px;
+    box-sizing: border-box;
 }
 .aboutHero-container {
-    width: 55%;
-    margin: auto;
+    width: 620px;
+    margin: 20px 0;
+    /* background-color: cyan; */
 }
 .heroImage-container {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    width: 45%;
-    margin: auto;
-    height: 56vh;
-    border-radius: 300px;
+    width: 560px;
+    margin: 20px 0;
+    height: 35vw;
+    min-height: 418px;
+    /* background-color: indianred; */
 }
 
 /* About Hero Style */
@@ -40,4 +55,95 @@
     line-height: 2;
     font-size: 16px;
     color: rgb(165, 165, 165);
+}
+
+@media screen and (max-width: 1205px) {
+    .hero-profession {
+        padding-bottom: 30px;
+    }
+    .heroImage-container {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    .aboutHero-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .hero-intro, .hero-name {
+        font-size: 70px;
+    }
+    .hero-intro-container {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 0.5;
+        gap: 45px;
+    }
+    .about-hero-profession {
+        padding-top: 30px;
+        width: 600px;
+        /* background-color: hotpink; */
+    }
+}
+@media screen and (max-width: 630px) {
+    .aboutHero-container, .heroImage-container {
+        width: 100%;
+    }
+    .hero-intro, .hero-name {
+        width: 100%;
+        /* background-color: honeydew; */
+        text-align: left;
+    }
+    .about-hero-profession {
+        width: 100%;
+    }
+    .hero-container {
+        margin-top: 16%;
+    }
+}
+@media screen and (max-width: 573px) {
+    .hero-intro, .hero-name {
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 511px) {
+    .hero-intro, .hero-name {
+        font-size: 50px;
+    }
+    .about-hero-profession {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .hero-profession {
+        font-size: 22px;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .hero-intro, .hero-name {
+        font-size: 45px;
+    }
+    .hero-intro-container {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 398px) {
+    .hero-intro, .hero-name {
+        font-size: 40px;
+        margin: -5px 0;
+    }
+    .hero-profession {
+        margin-top: -40px;
+    }
+}
+@media screen and (max-width: 354px) {
+    .hero-intro, .hero-name {
+        font-size: 35px;
+        margin: -5px 0;
+    }
+    .hero-profession {
+        font-size: 18px;
+    }
+    .about-hero-profession {
+        font-size: 16px;
+    }
 }

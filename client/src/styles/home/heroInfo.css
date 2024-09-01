@@ -1,13 +1,23 @@
+.heroInfo-cover {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .heroInfo-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1254px;
     width: 100%;
-    margin: 0 auto;
 }
 .heroInfo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 17px;
+    width: 250px;
+    margin: 20px;
 }
 .heroInfo-title {
     font-size: 70px;
@@ -18,5 +28,6 @@
     color: rgb(165, 165, 165);
     display: flex;
     flex-wrap: wrap;
-    width: 100px;
+    width: 130px;
+
 }

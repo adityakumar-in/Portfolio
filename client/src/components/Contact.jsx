@@ -77,41 +77,43 @@ const Contact = () => {
   )
 
   return (
-    <div className='user-container'>
-      <div className='collaboration-container'>
-        <div className="collaboration-form-card" onMouseLeave={removeDropDown}>
-          <div className='collab-card-title'>Let's work together</div>
-          <div className='collab-card-caption'>Fill your details below</div>
+    <div className='contact-container'>
+      <div className='user-container'>
+        <div className='collaboration-container'>
+          <div className="collaboration-form-card" onMouseLeave={removeDropDown}>
+            <div className='collab-card-title'>Let's work together</div>
+            <div className='collab-card-caption'>Fill your details below</div>
 
-          <form action="">
+            <form action="">
 
-            <div className='input-container'>
-              <input type="text" className='input-text' placeholder='Name' onFocus={()=>{setInpActive('name')}}  onBlur={()=>{setInpActive('')}} id={inpActive==='name' && 'active-input'} />
-              <input type="text" className='input-text' placeholder='Project Name' onFocus={()=>{setInpActive('project')}}  onBlur={()=>{setInpActive('')}} id={inpActive==='project' && 'active-input'} />
-            </div>
-
-            <div className='input-container'>
-              <input type="number" className='input-number' placeholder='Phone No.' onFocus={()=>{setInpActive('phone')}}  onBlur={()=>{setInpActive('')}} id={inpActive==='phone' && 'active-input'} />
-              <input type="mail" className='input-mail' required placeholder='E-mail' onFocus={()=>{setInpActive('mail')}}  onBlur={()=>{setInpActive('')}}  id={inpActive==='mail' && 'active-input'} />
-            </div>
-
-            <div className='drop-down-container' onClick={()=>{setInpActive('drop');setDropDown(true); showHideDropDown()}}  onMouseLeave={()=>{setInpActive('')}}  id={inpActive==='drop' && 'active-input'}>
-              <div ref={dropDownRef}>{select}</div>
-              <div><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#B7B7B7"><path d="M480-380 276-584l20-20 184 184 184-184 20 20-204 204Z"/></svg></div>
-
-              <div className='drop-down hide-options' ref={selectRef}>
-                {dropDown && <DropDownOptions />}
+              <div className='input-container'>
+                <input type="text" className='input-text' placeholder='Name' onFocus={()=>{setInpActive('name')}}  onBlur={()=>{setInpActive('')}} id={inpActive==='name' && 'active-input'} />
+                <input type="text" className='input-text' placeholder='Project Name' onFocus={()=>{setInpActive('project')}}  onBlur={()=>{setInpActive('')}} id={inpActive==='project' && 'active-input'} />
               </div>
-            </div>
 
-            <textarea name="message" className='project-detail-input' onFocus={()=>{setInpActive('tarea')}} onBlur={()=>{setInpActive('')}} id={inpActive==='tarea' && 'active-input'} cols="30" rows="7" placeholder='Enter your project details here'></textarea>
-            <input type="button" className='submit-button' value="Send message" />
-            
-          </form>
+              <div className='input-container'>
+                <input type="number" className='input-number' placeholder='Phone No.' onFocus={()=>{setInpActive('phone')}}  onBlur={()=>{setInpActive('')}} id={inpActive==='phone' && 'active-input'} />
+                <input type="mail" className='input-mail' required placeholder='E-mail' onFocus={()=>{setInpActive('mail')}}  onBlur={()=>{setInpActive('')}}  id={inpActive==='mail' && 'active-input'} />
+              </div>
+
+              <div className='drop-down-container' onClick={()=>{setInpActive('drop');setDropDown(true); showHideDropDown()}}  onMouseLeave={()=>{setInpActive('')}}  id={inpActive==='drop' && 'active-input'}>
+                <div ref={dropDownRef}>{select}</div>
+                <div><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#B7B7B7"><path d="M480-380 276-584l20-20 184 184 184-184 20 20-204 204Z"/></svg></div>
+
+                <div className='drop-down hide-options' ref={selectRef}>
+                  {dropDown && <DropDownOptions />}
+                </div>
+              </div>
+
+              <textarea name="message" className='project-detail-input' onFocus={()=>{setInpActive('tarea')}} onBlur={()=>{setInpActive('')}} id={inpActive==='tarea' && 'active-input'} cols="30" rows="7" placeholder='Your project details'></textarea>
+              <input type="button" className='submit-button' value="Send message" />
+              
+            </form>
+          </div>
         </div>
-      </div>
 
-      <ContactCards />
+        <ContactCards />
+      </div>
     </div>
   )
 }

@@ -32,6 +32,10 @@
     fill: var(--selectedText);
 }
 
+.socials-container {
+    display: flex;
+    gap: 20px;
+}
 .hero-socials {
     display: flex;
     align-items: center;
@@ -57,4 +61,29 @@
 .hero-socials:not(:hover) {
     transform: translateY(2px);
     transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 1205px) {
+    .hero-links {
+        padding-bottom: 40px;
+    }
+    .hero-cv {
+        border: 1px solid var(--selectedText);
+    }
+    .hero-cv-text {
+        color: var(--selectedText);
+    }
+    .hero-cv-text > svg {
+        fill: var(--selectedText);
+    }
+}
+@media screen and (max-width: 511px) {
+    .hero-links {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: flex-start;
+    }
+    .socials-container {
+        margin: 7px 5px;
+    }
 }

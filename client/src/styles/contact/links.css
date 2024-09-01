@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 35%;
+    /* min-width: 358px; */
 }
 .contact-card {
     display: flex;
@@ -28,4 +29,23 @@
 #link-icon:hover {
     color: var(--selectedText);
     cursor: pointer;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 1059px) {
+    .contact-details {
+        padding: 80px 0;
+    }
+    .contact-card > div > svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contact-details {
+        width: 100%;
+    }
+    
 }

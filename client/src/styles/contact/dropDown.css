@@ -15,7 +15,7 @@
 .drop-down {
     position: absolute;
     z-index: 4;
-    bottom: -7px;
+    bottom: 3px;
     left: 29px;
     display: flex;
     flex-direction: column;
@@ -52,4 +52,35 @@
 }
 .show-options {
     visibility: visible;
+}
+
+@media screen and (max-width: 700px) {
+    .drop-down {
+        bottom: -129px;
+        left: 29px;
+        width: 90%;
+    }
+}
+@media screen and (max-width: 617px) {
+    .drop-down {
+        width: 89%;
+    }
+}
+@media screen and (max-width: 555px) {
+    .drop-down {
+        width: 87%;
+    }
+}
+
+@media screen and (max-width: 474px) {
+    .drop-down {
+        bottom: -64px;
+        left: 18px;
+        width: 92%;
+    }
+}
+@media screen and (max-width: 382px) {
+    .drop-down {
+        width: 89%;
+    }
 }
