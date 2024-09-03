@@ -14,11 +14,13 @@
 .education-cards-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 30px;
-    align-items: center;
+    align-items: flex-start;
+    height: 360px;
+    max-height: 360px;
     overflow-y : scroll;
     overflow-x: hidden;
-    height: 360px;
 }
 .education-cards-container::-webkit-scrollbar {
     width: 7px;
@@ -32,4 +34,35 @@
 }
 .education-cards-container::-webkit-scrollbar-track {
     background-color: var(--darkBackground);
+}
+
+@media screen and (max-width: 425px) {
+    .education-cards-container {
+        justify-content: center;
+    }
+    .education-caption {
+        box-sizing: border-box;
+        width: 100%;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .education-caption {
+        font-size: 14px;
+        margin: 0;
+        margin: 10px 0;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 250px) {
+    .education-title {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 290px) {
+    .education-course {
+        font-size: 14px;
+        margin: 0;
+    }
 }

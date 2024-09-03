@@ -87,3 +87,19 @@
         margin: 7px 5px;
     }
 }
+@media screen and (max-width: 300px) {
+    .socials-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .hero-cv {
+        padding: 14px 25px;
+        cursor: pointer;
+    }
+    .hero-cv-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+    }
+}

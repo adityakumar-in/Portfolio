@@ -7,26 +7,6 @@
     }
 }
 
-/* Hero St */
-/* #hero {
-    border-radius: 350px;
-    position: absolute;
-    z-index: -1;
-    width: 34%;
-    min-width: 418px;
-    background-color: transparent;
-} */
-/* #heroFrame {
-    position: absolute;
-    z-index: 0;
-    width: 35%;
-    min-width: 418px;
-    background-color: transparent;
-    animation: rotate 20s linear infinite;
-    margin: 10px 0;
-    border-radius: 200px;
-} */
-
 #hero {
     position: absolute;
     z-index: 0;
@@ -49,19 +29,44 @@
     margin: 10px 0;
     border-radius: 50%; /* Make it circular */
 }
-
+.heroImage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 560px;
+    margin: 20px 0;
+    height: 35vw;
+    min-height: 418px;
+    border-radius: 200px;
+    /* background-color: indianred; */
+}
+@media screen and (max-width: 1205px) {
+    .heroImage-container {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+}
 @media screen and (max-width: 630px) {
-    #hero, #heroFrame {
+    #hero {
+        min-width: 0px;
+        min-height: 0px; /* Ensure minimum height is also set */
+        width: 73vw; /* Use viewport width for responsiveness */
+        height: 73vw; /* Same as width for a circle */
+    }
+    #heroFrame {
         min-width: 0px;
         min-height: 0px; /* Ensure minimum height is also set */
         width: 75vw; /* Use viewport width for responsiveness */
         height: 75vw; /* Same as width for a circle */
     }
-}
-
-/* @media screen and (max-width: 630px) {
-    #hero, #heroFrame {
-        min-width: 0px;
-        width: 75%;
+    .heroImage-container {
+        width: 100%;
+        min-height: 80vw;
     }
-} */
+}
+@media screen and (max-width: 398px) {
+    .heroImage-container {
+        min-height: 97vw;
+    }
+}

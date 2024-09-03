@@ -3,7 +3,7 @@
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    padding: 9px 15px;
+    padding: 9px 17px;
     font-size: 18px;
     justify-content: space-between;
     background-color: var(--darkBackground);
@@ -15,21 +15,28 @@
 .drop-down {
     position: absolute;
     z-index: 4;
-    bottom: 3px;
+    bottom: 9px;
     left: 29px;
     display: flex;
     flex-direction: column;
-    width: 89%;
+    width: 90%;
     justify-content: center;
     align-items: center;
     border-radius: 7px;
     background-color: var(--darkBackground);
+}
+.drop-down-container > div > svg {
+    box-sizing: border-box;
+    padding-top: 5px;
+    width: 28px;
+    height: 28px;
 }
 .options {
     font-size: 18px;
     padding: 14px 18px;
     width: 93%;
     border-radius: 7px;
+    padding-left: 21px;
 }
 .options:hover {
     background-color: var(--highlightedText);
@@ -40,11 +47,11 @@
 .options-caption {
     font-size: 16px;
     color: rgb(116, 115, 115);
-    padding-top: 20px;
-    padding-left: 40px;
-    text-align: left;
+    padding-top: 15px;
+    text-align: center;
     margin-bottom: 10px;
     width: 100%;
+    text-align: center;
 }
 
 .hide-options {
@@ -56,9 +63,9 @@
 
 @media screen and (max-width: 700px) {
     .drop-down {
-        bottom: -129px;
-        left: 29px;
-        width: 90%;
+        bottom: 41px;
+        left: 31px;
+        width: 89%;
     }
 }
 @media screen and (max-width: 617px) {
@@ -66,21 +73,111 @@
         width: 89%;
     }
 }
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 600px) {
+    .drop-down {
+        bottom: 12px;
+    }
+}
+@media screen and (max-width: 570px) {
+    .drop-down {
+        width: 88%;
+    }
+}
+@media screen and (max-width: 530px) {
     .drop-down {
         width: 87%;
+    }
+}
+@media screen and (max-width: 490px) {
+    .drop-down {
+        width: 86%;
     }
 }
 
 @media screen and (max-width: 474px) {
     .drop-down {
-        bottom: -64px;
-        left: 18px;
+        bottom: -58px;
+        left: 16px;
         width: 92%;
+    }
+    .options {
+        padding-left: 40px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .drop-down {
+        
+        width: 90%;
     }
 }
 @media screen and (max-width: 382px) {
     .drop-down {
         width: 89%;
+    }
+}
+@media screen and (max-width: 348px) {
+    .drop-down {
+        width: 88%;
+        bottom: -58px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .options, .drop-down-container, .options-caption {
+        font-size: 16px;
+    }
+    .options-caption {
+        padding-top: 17px;
+    }
+    .options {
+        padding: 10px 14px;
+        padding-left: 40px;
+    }
+    .drop-down-container > div > svg {
+        box-sizing: border-box;
+        padding-top: 7px;
+        width: 24px;
+        height: 24px;   
+    }
+    .drop-down {
+        bottom: -11px;
+    }
+    .drop-down-container {
+        padding: 9px 10px;
+    }
+}
+@media screen and (max-width: 309px) {
+    .options, .drop-down-container, .options-caption {
+        font-size: 13px;
+    }
+    .drop-down {
+        bottom: 14px;
+        width: 85%;
+    }
+}
+@media screen and (max-width: 300px) {
+    .drop-down {
+        bottom: 12px;
+    }
+}
+@media screen and (max-width: 277px) {
+    .drop-down {
+        width: 84%;
+    }
+}
+@media screen and (max-width: 270px) {
+    .drop-down {
+        bottom: -28px;
+        left: 15px;
+    }
+}
+@media screen and (max-width: 270px) {
+    .options-caption {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 250px) {
+    .drop-down-container {
+        font-size: 11px;
     }
 }

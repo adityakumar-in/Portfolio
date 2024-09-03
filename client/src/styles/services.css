@@ -1,5 +1,13 @@
+.services-cover {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .services-container {
     margin-top: 125px;
+    max-width: 1254px;
     width: 100%;
 }
 .services {
@@ -45,4 +53,102 @@
 }
 .service-card:hover .service-number {
     text-shadow: -1px -1px 0 var(--highlightedText), 1px -1px 0 var(--highlightedText), -1px 1px 0 var(--highlightedText), 1px 1px 0 var(--highlightedText);
+}
+
+@media screen and (max-width: 1050px) {
+    .services-container {
+        margin-top: 85px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .services-container {
+        margin-top: 70px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .service-number {
+        font-size: 65px;
+    }
+    .service-title {
+        font-size: 40px;
+    }
+    .about-service {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .service-number {
+        font-size: 60px;
+    }
+    .service-title {
+        font-size: 38px;
+    }
+    .about-service {
+        font-size: 18px;
+    }
+    .services {
+        gap: 10px;
+        padding: 10px 10px;
+        box-sizing: border-box;
+    }
+}
+@media screen and (max-width: 404px) {
+    .service-number {
+        font-size: 50px;
+    }
+    .service-title {
+        font-size: 35px;
+        margin: 10px 0;
+    }
+    .about-service {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 374px) {
+    .service-number {
+        font-size: 40px;
+    }
+    .service-title {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 330px) {
+    .service-number {
+        font-size: 35px;
+    }
+    .service-title {
+        font-size: 27px;
+    }
+    .about-service {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .service-number {
+        font-size: 25px;
+    }
+    .service-title {
+        font-size: 22px;
+    }
+    .about-service {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 255px) {
+    .service-number {
+        font-size: 25px;
+    }
+    .service-title {
+        font-size: 20px;
+    }
+    .about-service {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .services-container {
+        margin-top: 420px;
+    }
 }

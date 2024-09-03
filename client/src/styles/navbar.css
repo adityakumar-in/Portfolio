@@ -21,6 +21,7 @@
 }
 .hamburger-icon {
     display: none;
+    margin-right: -10px;
 }
 
 /* Portfolio Title  */
@@ -83,6 +84,11 @@
 }
 
 /* Hire-me button  */
+a {
+    outline: none;
+    text-decoration: none;
+    color: var(--darkBackground);
+}
 .hire-me-button {
     background-color: var(--highlightedText);
     color: var(--darkBackground);
@@ -92,6 +98,7 @@
     transition: transform 0.5s box-shadow 0.5s;
     font-size: 18px;
     box-sizing: border-box;
+    
 }
 .hire-me-button:hover {
     transform: translateY(-2px);
@@ -176,7 +183,15 @@ Link {
 
 
 /* Media Queries */
+@media screen and (max-width: 1293px) {
+    .navbar-title {
+        padding-left:20px;
+    }
+}
 @media screen and (max-width: 1050px) {
+    .navbar-title {
+        align-items: flex-start;
+    }
     .navbar-body {
         display: none;
     }
@@ -200,9 +215,35 @@ Link {
     }
     .hamburger-drop-down {
         width: 50%;
+        top: 86px;
     }
     .hamburger-link {
         padding: 20px 0;
         font-size: 16px;
+    }
+}
+@media screen and (max-width: 340px) {
+    #name {
+        font-size: 26px;
+    }
+    .hamburger-icon > svg {
+        width: 35px;
+        height: 35px;
+    }
+    .hamburger-drop-down {
+        top: 76px;
+    }
+}
+@media screen and (max-width: 290px) {
+    #name {
+        font-size: 24px;
+    }
+    .hamburger-icon > svg {
+        width: 30px;
+        height: 30px;
+    }
+    .hamburger-link {
+        padding: 13px 0;
+        font-size: 14px;
     }
 }

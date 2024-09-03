@@ -38,11 +38,13 @@ const Services = () => {
   )
 
   return (
-    <div className='services-container'>
-      <div className='services'>
-        {serviceDetails.map((serviceDetail, i) => (
-          <Service key={i} {...serviceDetail} />
-        ))}
+    <div className='services-cover'>
+      <div className='services-container'>
+        <div className='services'>
+          {serviceDetails.map((serviceDetail, i) => (
+            <Service key={i} {...serviceDetail} />
+          ))}
+        </div>
       </div>
     </div>
   )

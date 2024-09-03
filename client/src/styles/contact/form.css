@@ -29,6 +29,7 @@
     font-weight: 200;
     background-color: var(--darkBackground);
     border: 1.5px solid transparent;
+    line-height: 1.3;
 }
 .project-detail-input:focus {
     width: 100%;
@@ -82,6 +83,15 @@
         border-radius: 40px;
     }
 }
+@media screen and (max-width: 600px) {
+    .project-detail-input {
+        width: 94%;
+        height: 170px;
+    }
+    .project-detail-input:focus, .project-detail-input:hover, .project-detail-input:active {
+        height: 197px;
+    }
+}
 @media screen and (max-width: 494px) {
     .project-detail-input {
         width: 92%;
@@ -105,9 +115,56 @@
         font-weight: 400;
     }
 }
+@media screen and (max-width: 440px) {
+    .project-detail-input {
+        width: 91%;
+    }
+}
 @media screen and (max-width: 374px) {
     .project-detail-input {
         width: 90%;
     }
-    
+}
+@media screen and (max-width: 340px) {
+    .input-text, .input-number, .input-mail, .project-detail-input {
+        font-size: 16px;
+    }
+    .project-detail-input {
+        width: 88%;
+        font-size: 15px;
+    }
+    .project-detail-input:focus, .project-detail-input:hover, .project-detail-input:active {
+        font-size: 15px;
+    }
+    .submit-button {
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .project-detail-input {
+        width: 87%;
+        font-size: 13px;
+    }
+    .project-detail-input:focus, .project-detail-input:hover, .project-detail-input:active {
+        font-size: 13px;
+    }
+    .submit-button {
+        padding: 12px 12px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 270px) {
+    .project-detail-input {
+        font-size: 11px;
+        height: 80px;
+        width: 85%;
+    }
+    .project-detail-input:focus, .project-detail-input:hover, .project-detail-input:active {
+        font-size: 11px;
+        height: 108px;
+    }
+    .input-text, .input-number, .input-mail {
+        font-size: 15px;
+    }
 }

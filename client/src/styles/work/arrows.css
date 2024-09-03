@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
     height: 73vh;
     padding: 18px 10px;
 }
@@ -35,5 +36,11 @@
     }
     .change-project-arrow {
         padding: 18px 0;
+    }
+}
+@media screen and (max-width: 300px) {
+    .change-project-arrow {
+        max-width: 10%;
+        padding: 35vh 0;
     }
 }

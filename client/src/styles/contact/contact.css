@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 99vw;
+    width: 100%;
     height: 70vh;
-    margin-top: 125px;
+    margin-top: 155px;
 }
 .user-container {
     display: flex;
@@ -62,6 +62,9 @@
         min-width: 564px;
         height: fit-content;
     }
+    .contact-container {
+        margin-top: 120px;
+    }
 }
 @media screen and (max-width: 700) {
     .collaboration-form-card {
@@ -72,12 +75,15 @@
 @media screen and (max-width: 600px) {
     .collaboration-container {
         min-width: 0px;
-        width: 99%;
+        width: 100%;
         height: fit-content;
     }
     .project-detail-input {
         font-size: 16px;
         height: 130px;
+    }
+    .contact-container {
+        margin-top: 120px;
     }
 }
 @media screen and (max-width: 474px) {
@@ -90,12 +96,81 @@
         padding-left: 2px;
         margin-bottom: 5px;
     }
+    .contact-container {
+        width: 100%;
+        margin-top: 90px;
+        height: fit-content;
+    }
     .collaboration-form-card {
+        width: 100%;
         padding: 30px 15px;
         height: fit-content;
     }
     .contact-container {
-        margin-top: 105px;
-        height: fit-content;
+        margin-top: 70px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .collab-card-title {
+        font-size: 23px;
+    }
+}
+@media screen and (max-width: 356px) {
+    .collab-card-title {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 342px) {
+    .collab-card-title {
+        font-size: 21px;
+    }
+    .collab-card-caption {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 326px) {
+    .collab-card-title {
+        font-size: 19px;
+    }
+    .collab-card-caption {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 305px) {
+    .collab-card-title {
+        font-size: 18px;
+    }
+    .collab-card-caption {
+        font-size: 12px;
+    }
+    .contact-container {
+        margin-top: 80px;
+    }
+}
+@media screen and (max-width: 292px) {
+    .collab-card-title {
+        font-size: 17px;
+    }
+    .collab-card-caption {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 285px) {
+    .collab-card-title {
+        font-size: 16px;
+    }
+    .collab-card-caption {
+        font-size: 11px;
+    }
+    .contact-container {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 270px) {
+    .collab-card-title {
+        font-size: 15px;
+    }
+    .collab-card-caption {
+        font-size: 10px;
     }
 }

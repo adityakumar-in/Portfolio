@@ -1,9 +1,11 @@
 .skill-svg {
     padding: 30px 40px;
     background-color: rgb(58 59 65 / 52%);
-    width: fit-content;
+    /* margin: 15px; */
+    width: 60px;
     border-radius: 7px;
     transition: transform 0.5s box-shadow 0.5s;
+    /* background-color: bisque; */
 }
 .skill-svg > svg {
     width: 60px;

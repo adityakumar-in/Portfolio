@@ -27,7 +27,7 @@ const Education = () => {
   const EducationCard = ({ year, course, org, short }) => (
     <div className='education-card'>
       <div className='education-year'>{year}</div>
-      <div>{course}</div>
+      <div className='education-course'>{course}</div>
       <div className={short ? 'education-org short-text' : 'education-org'}>{org}</div>
     </div>
   )
