@@ -14,6 +14,8 @@
     padding-top: 40px;
     width: 1178px;
     background-color: var(--darkBackground);
+
+    background-color: red;
 }
 .navbar-body {
     display: flex;
@@ -177,7 +179,7 @@ Link {
     width: 100%;
 }
 .active-option {
-    background-color: var(--darkBackground);
+    background-color: var(--highlightedText);
     font-weight: 500;
 }
 
