@@ -33,7 +33,7 @@ const Navbar = () => {
         <Link className="Link Header" to="/"><div id='name'>Aditya<span id='name-suffix'>.</span></div></Link>
         <div className='navbar-body'>
           <ul className='normal-ul'>
-            <Link className={path==='/home' ? "Link active" : "Link passive"} to="/home"><li className='normal-li'>Home</li></Link>
+            <Link className={(path==='/home' || path==='/') ? "Link active" : "Link passive"} to="/home"><li className='normal-li'>Home</li></Link>
             <Link className={path==='/work' ? "Link active" : "Link passive"}  to="/work"><li className='normal-li'>Work</li></Link>
             <Link className={path==='/services' ? "Link active" : "Link passive"} to="/services"><li className='normal-li'>Services</li></Link>
             <Link className={path==='/resume' ? "Link active" : "Link passive"}  to="/resume"><li className='normal-li'>Resume</li></Link>
