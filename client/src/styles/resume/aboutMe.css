@@ -66,6 +66,13 @@
     color: #03e289;
     animation: flicker 1.8s infinite linear;
 }
+.flicker:hover {
+    cursor: pointer;
+}
+.link-hover:hover {
+    color: var(--selectedText);
+    cursor: pointer;
+}
 
 
 @media screen and (max-width: 760px) {
