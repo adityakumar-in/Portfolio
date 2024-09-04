@@ -3,7 +3,7 @@
         color: #03e289;
     }
     50% {
-        color: #01ad68;
+        color: #049058;
     }
     100% {
         color: #03e289;
@@ -36,15 +36,17 @@
     text-align: left;
     margin-right: 90px;
     justify-content: space-between;
-    width: fit-content;
+    width: 96%;
     box-sizing: border-box;
     /* background-color: aquamarine; */
     margin: 2px;
     padding: 5px;
+    /* gap: 80px; */
 }
 .about-me-info {
     text-align: left;
-    width: 49%;
+    /* min-width: fit-content; */
+    width: 50%;
     box-sizing: border-box;
     margin: 10px 0;
     font-size: 14px;
@@ -58,13 +60,7 @@
     font-size: 18px;
     color: white;
     font-weight: 200;
-}
-.about-me-info:hover {
-    color: var(--highlightedText);
-    cursor: pointer;
-}
-.about-me-info-link:hover, .about-me-info:hover .about-me-info-link {
-    color: var(--selectedText);
+    width: fit-content;
 }
 .flicker {
     color: #03e289;
@@ -76,6 +72,7 @@
     .about-me-card {
         width: 100%;
         justify-content: flex-start;
+        gap: 0px;
     }
     .about-me-info {
         width: fit-content;
