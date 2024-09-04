@@ -177,7 +177,7 @@ Link {
     width: 100%;
 }
 .active-option {
-    background-color: var(--highlightedText);
+    background-color: var(--darkBackground);
     font-weight: 500;
 }
 
