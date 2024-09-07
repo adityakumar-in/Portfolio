@@ -6,7 +6,6 @@
     flex-direction: column;
 }
 .services-container {
-    margin-top: 125px;
     max-width: 1254px;
     width: 100%;
 }
@@ -55,16 +54,6 @@
     text-shadow: -1px -1px 0 var(--highlightedText), 1px -1px 0 var(--highlightedText), -1px 1px 0 var(--highlightedText), 1px 1px 0 var(--highlightedText);
 }
 
-@media screen and (max-width: 1050px) {
-    .services-container {
-        margin-top: 85px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .services-container {
-        margin-top: 70px;
-    }
-}
 @media screen and (max-width: 550px) {
     .service-number {
         font-size: 65px;
@@ -144,11 +133,5 @@
     }
     .about-service {
         font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 250px) {
-    .services-container {
-        margin-top: 420px;
     }
 }

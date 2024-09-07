@@ -3,9 +3,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 85vh;
+    height: fit-content;
 }
 .resume {
-    margin-top: 185px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -91,9 +92,6 @@
         margin: 0;
         margin-left: 20px;
         box-sizing: border-box;
-    }
-    .resume {
-        margin-top: 145px;
     }
 }
 @media screen and (max-width: 690px) {

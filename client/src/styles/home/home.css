@@ -14,7 +14,6 @@
     flex-wrap: wrap-reverse;
     justify-content: center;
     align-items: center;
-    margin-top: 125px;
     background-color: transparent;
     /* background-color: yellow; */
     padding: 0 5px;
@@ -81,9 +80,6 @@
     }
     .about-hero-profession {
         width: 100%;
-    }
-    .hero-container {
-        margin-top: 16%;
     }
 }
 @media screen and (max-width: 573px) {
